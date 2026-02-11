@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Status</title>
+</head>
+<body>
+
+    <h1>PRODUCT STATUS</h1>
+
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Product</th>
+            <th>Status</th>
+            <th>Update</th>
+            <th>Delete</th>
+        </tr>
+
+        {% for order in orders %}
+        <tr>
+            <td>{{ order.name }}</td>
+            <td>{{ order.product }}</td>
+            <td>{{ order.status }}</td>
+            <td><a href="/update/{{ loop.index0 }}">Update</a></td>
+            <td><a href="/delete/{{ loop.index0 }}">Delete</a></td>
+        </tr>
+        {% endfor %}
+
+    </table>
+
+    <br>
+    <a href="/vendor">Back to Vendor</a>
+
+</body>
+</html>
