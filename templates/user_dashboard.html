@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Dashboard</title>
+</head>
+<body>
+
+    <h1>USER DASHBOARD</h1>
+
+    <h3>Vendor Products</h3>
+
+    <ul>
+        {% for product in products %}
+        <li>
+            {{ product }}
+            <a href="/cart/{{ product }}">Add to Cart</a>
+        </li>
+        {% endfor %}
+    </ul>
+
+    <br>
+    <a href="/order_status">Check Order Status</a><br><br>
+    <a href="/logout">Logout</a>
+
+</body>
+</html>
