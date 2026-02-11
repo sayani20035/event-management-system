@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cart</title>
+</head>
+<body>
+
+    <h1>CART</h1>
+
+    <p>Selected Product: <strong>{{ product }}</strong></p>
+
+    <form method="POST" action="/payment">
+
+        Your Name:<br>
+        <input type="text" name="name" required><br><br>
+
+        <input type="hidden" name="product" value="{{ product }}">
+
+        <button type="submit">Proceed to Payment</button>
+
+    </form>
+
+    <br>
+    <a href="/user">Back</a>
+
+</body>
+</html>
